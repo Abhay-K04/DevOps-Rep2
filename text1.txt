@@ -1,0 +1,27 @@
+Storage Optimization Model
+
+Objective: minimize total storage cost while meeting capacity, performance, availability, and retention requirements.
+
+Minimize:
+	C = C_capacity + C_operations + C_transfer + C_downtime + C_compliance
+
+Subject to:
+	usable capacity >= demand × (1 + safety margin)
+	latency <= service-level target
+	availability >= required availability
+	retained data >= policy requirement
+
+Decision variables:
+- storage tier and media type
+- replication or erasure-coding factor
+- compression and deduplication levels
+- data placement and lifecycle schedules
+- reserved versus on-demand capacity
+
+Process:
+1. Measure usage, growth, access frequency, latency, and failure rates.
+2. Classify data by performance, availability, and retention needs.
+3. Place data across hot, warm, cold, and archive tiers.
+4. Apply compression, deduplication, and appropriate redundancy.
+5. Automate migration, deletion, and capacity scaling.
+6. Monitor cost and service objectives; recalculate the model regularly.
